@@ -66,7 +66,7 @@ func SearchStudents(id string) {
 		// fmt.Println(temp)
 	}
 
-	if temp >= 0 {
+	if temp > 0 {
 		fmt.Println("Nama \t:", students[temp].Profile.Nama)
 		fmt.Println("Alamat \t:", students[temp].Profile.Alamat)
 		fmt.Println("Pekerjaan \t:", students[temp].Profile.Pekerjaan)
