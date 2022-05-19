@@ -59,18 +59,16 @@ func SearchStudents(id string) {
 	}
 
 	for key, data := range students {
-		// fmt.Println(key)
 		if nimId == data.Nim {
-			temp = key
+			temp = key + 1
 		}
-		// fmt.Println(temp)
 	}
 
 	if temp > 0 {
-		fmt.Println("Nama \t:", students[temp].Profile.Nama)
-		fmt.Println("Alamat \t:", students[temp].Profile.Alamat)
-		fmt.Println("Pekerjaan \t:", students[temp].Profile.Pekerjaan)
-		fmt.Println("Alasan \t:", students[temp].Profile.Alasan)
+		fmt.Println("Nama \t:", students[temp-1].Profile.Nama)
+		fmt.Println("Alamat \t:", students[temp-1].Profile.Alamat)
+		fmt.Println("Pekerjaan \t:", students[temp-1].Profile.Pekerjaan)
+		fmt.Println("Alasan \t:", students[temp-1].Profile.Alasan)
 	} else {
 		fmt.Println("Data Tidak Ditemukan")
 	}
